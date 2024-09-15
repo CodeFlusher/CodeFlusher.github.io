@@ -11,7 +11,7 @@ export default {
       },
 
       backgroundImage: {
-        'encodes': "url('src/assets/binary.jpg')",
+        'encodes': "url('/binary.jpg')",
       },
 
       aspectRatio:{
