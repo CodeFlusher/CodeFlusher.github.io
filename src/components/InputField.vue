@@ -14,10 +14,10 @@ const clearField = ()=>{
 
 const triggerFileInput = () => {
     if(fileInput.value == null){
-        return;
+        return
     }
     // Programmatically click the hidden file input
-    fileInput.value.click();
+    (fileInput.value as HTMLElement).click();
 };
 
 const onFileChange = (event: any) => {
@@ -38,7 +38,11 @@ const onFileChange = (event: any) => {
 
 const downloadFile = () => {
         
-    const blob = new Blob([model.value], { type: 'text/plain' }); // Create a new Blob with the text input
+    if(model.value == undefined){
+        return
+    }
+
+    const blob = new Blob([model.value as BlobPart], { type: 'text/plain' }); // Create a new Blob with the text input
     const url = URL.createObjectURL(blob); // Create a URL for the Blob
 
     // Create a temporary anchor element to trigger the download
@@ -60,7 +64,7 @@ const downloadFile = () => {
 <template>
 
     <div class="flex flex-col gap-3">
-        <textarea v-model="model" name="name" id="id" class=" h-[65vh] rounded-lg bg-neutral-200 dark:bg-neutral-800  border-neutral-400 dark:border-neutral-700 focus:border-green-600 border-[2px] p-4 text-lg text-white placeholder:text-neutral-800 dark:placeholder:text-neutral-400" placeholder="Put Text Here" e>
+        <textarea v-model="model as string" name="name" id="id" class=" h-[65vh] rounded-lg bg-neutral-200 dark:bg-neutral-800  border-neutral-400 dark:border-neutral-700 focus:border-green-600 border-[2px] p-4 text-lg text-white placeholder:text-neutral-800 dark:placeholder:text-neutral-400" placeholder="Put Text Here" e>
         </textarea>
         <input ref="fileInput" type="file"  @change="onFileChange" class="hidden">
         <div class="flex md:flex-col gap-3 w-full justify-between">
