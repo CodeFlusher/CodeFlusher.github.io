@@ -23,7 +23,7 @@ const swap = ()=>{
       <DatagenUnit v-model:in="inputFieldReference" v-model:out="outputFieldReference" class="w-full p-4 rounded-xl bg-transparent border-2 border-green-700 dark:border-green-500"></DatagenUnit>
     </div>
     <InputField v-model="inputFieldReference" class="w-full"/>
-    <img @click="swap" src="../assets/arrow-swap.svg" class=" dark:fill-white aspect-square w-48">
+    <img @click="swap" src="../assets/arrow-swap.svg" class="aspect-square w-24 md:w-48 m-auto">
     <InputField v-model="outputFieldReference" class="w-full"/>
   </div>
   

@@ -86,18 +86,18 @@ const  executeDigitDatagen = ()=>{
 <style src="@vueform/slider/themes/default.css"></style>
 
 <template>
-    <div class="flex flex-col gap-3 ">
+    <div class="flex flex-col gap-3 bg-neutral-200 dark:bg-neutral-800">
         <section class="flex flex-col gap-3 ">
-            <h1 class="font-bold text-white text-xl">Datagen</h1>
+            <h1 class="font-bold text-black dark:text-white text-xl">Datagen</h1>
             <span>Количество генерируемых цифр</span>
             <div class="flex w-full">
-                <input type="number" v-model="digitsSliderValue" class="rounded-lg bg-neutral-200 dark:bg-neutral-800  border-neutral-400 dark:border-neutral-700 focus:border-green-600 border-[2px] p-1 text-lg text-white placeholder:text-neutral-800 dark:placeholder:text-neutral-400 w-12">
-                <Slider :min=1 :max=250 class="mt-8 w-full self-center" v-model="digitsSliderValue" />
+                <input type="number" v-model="digitsSliderValue" class="rounded-lg bg-neutral-300 dark:bg-neutral-900  border-neutral-400 dark:border-neutral-700 focus:border-green-600 border-[2px] p-1 text-lg text-white placeholder:text-neutral-800 dark:placeholder:text-neutral-400 w-12">
+                <Slider :min=1 :max=250 class="mt-8 w-full self-center m-4" v-model="digitsSliderValue" />
             </div>
             <button @click="executeDigitDatagen()" name="load" class="p-2 w-full bg-green-600 rounded-lg hover:bg-green-500 transition-all text-white font-bold text-lg" > Сгенерировать</button>
         </section>
         <section class="flex flex-col gap-3 ">
-            <h2 class="font-bold text-white text-lg">Кодировка Данных</h2>
+            <h2 class="font-bold text-black dark:text-white text-lg">Кодировка Данных</h2>
             <div class="flex">
                 <input type="checkbox" v-model="addMistakes" id="mistakesInCodes" class="m-2 rounded-lg bg-neutral-200 dark:bg-neutral-700 accent-green-500 aspect-square w-6 ">
                 <label class="self-center" for="mistakesInCodes">Добавить ошибку?</label>

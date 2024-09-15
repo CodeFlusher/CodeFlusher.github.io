@@ -7,7 +7,6 @@ import InputField from '@/components/InputField.vue';
 const items = [{pageName:"Коды Хэмминга", pageDescription: "Утилита для расшифровки кодов Хэмминга, а так же генерации новых", pageBG:"encodes", pageDir:"encode"}]
 
 const directToPage = (pageDirection:String)=>{
-  console.log('TEst')
   router.push('/'+pageDirection)
 }
 

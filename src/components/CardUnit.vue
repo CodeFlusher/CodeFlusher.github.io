@@ -1,30 +1,6 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-
-
-// :class="'bg-[(\'' + props.pageImg + '\')]'"
 
 const props = defineProps({pageName:String, pageImg:String, pageDescription:String})
-
-const pointerStateReference = ref(false)
-
-const pointerOver = computed(()=>{
-  if(!pointerStateReference.value){
-    return "";
-  }
-
-  return "  w-full"
-
-})
-
-const pointerEnter = ()=>{
-  console.log("Enter")
-  pointerStateReference.value = true
-}
-const pointerExit = ()=>{
-  console.log("Exit")
-  pointerStateReference.value = false
-}
 
 </script>
 
