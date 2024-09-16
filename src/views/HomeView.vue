@@ -13,7 +13,7 @@ const directToPage = (pageDirection:String)=>{
 </script>
 
 <template>
-  <main class="w-full flex-col gap-4">
+  <main class="w-full flex-col gap-4 p-4">
     <CardUnit v-for="item in items" @click="directToPage(item.pageDir)" class="m-auto rounded-xl backdrop:rounded-xl hover:shadow-lg hover:shadow-gray-500 dark:hover:shadow-gray-800" :page-description="item.pageDescription" :page-name="item.pageName" :page-img="item.pageBG"/>
   </main>
 </template>

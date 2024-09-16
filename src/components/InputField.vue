@@ -64,12 +64,12 @@ const downloadFile = () => {
 <template>
 
     <div class="flex flex-col gap-3">
-        <textarea v-model="model as string" name="name" id="id" class=" h-[65vh] rounded-lg bg-neutral-200 dark:bg-neutral-800  border-neutral-400 dark:border-neutral-700 focus:border-green-600 border-[2px] p-4 text-lg text-white placeholder:text-neutral-800 dark:placeholder:text-neutral-400" placeholder="Put Text Here" e>
+        <textarea v-model="model as string" name="name" id="id" class=" h-[65vh] rounded-lg bg-neutral-200 dark:bg-neutral-800  border-neutral-400 dark:border-neutral-700 focus:border-green-600 border-[2px] p-4 text-lg text-black dark:text-white placeholder:text-neutral-800 dark:placeholder:text-neutral-400" placeholder="Put Text Here" e>
         </textarea>
         <input ref="fileInput" type="file"  @change="onFileChange" class="hidden">
         <div class="flex md:flex-col gap-3 w-full justify-between">
-            <button @click="clearField()" name="clear" class="h-12 w-full bg-red-800 rounded-lg hover:bg-red-600 transition-all text-white font-bold text-lg" > Очистить</button>
-            <button @click="triggerFileInput()" name="upload" class="h-12 w-full bg-green-700 rounded-lg hover:bg-green-600 transition-all text-white font-bold text-lg" > Загрузить</button>
+            <button @click="clearField()" name="clear" class="h-12 w-full bg-red-700 dark:bg-red-800 rounded-lg hover:bg-red-600 transition-all text-white font-bold text-lg" > Очистить</button>
+            <button @click="triggerFileInput()" name="upload" class="h-12 w-full bg-green-600 hover:bg-green-500 rounded-lg transition-all text-white font-bold text-lg" > Загрузить</button>
             <button @click="downloadFile()" name="download" class="h-12 w-full bg-neutral-700 dark:bg-neutral-300 hover:bg-green-500 bg-clip-text transition-all  text-transparent font-bold text-lg" > Скачать</button>
         </div>
         

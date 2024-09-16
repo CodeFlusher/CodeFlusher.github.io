@@ -2,12 +2,13 @@
 import Slider from '@vueform/slider';
 import { ref } from 'vue';
 
-const outField = defineModel('out')
-const inField = defineModel('in')
+const outField = defineModel<string>('out')
+const inField = defineModel<string>('in')
+const digitsSliderValue = defineModel<number>('sliderState') 
 
-const addMistakes = ref(false)
+const addMistakes = defineModel<boolean>('addMistakes')
 
-const digitsSliderValue = ref(5)
+// const digitsSliderValue = ref(5)
 
 const dec2bin = (dec:number)=> {
     let newNum = dec.toString(2)
@@ -75,7 +76,7 @@ const  executeCodeDatagen = ()=>{
 
 const  executeDigitDatagen = ()=>{
     var digits = ""
-    for (let i = 0; i < digitsSliderValue.value; i++) {
+    for (let i = 0; i < (digitsSliderValue.value as number); i++) {
         digits = digits + Math.round(15*Math.random()) + " "
     }
     inField.value = digits;
@@ -91,7 +92,7 @@ const  executeDigitDatagen = ()=>{
             <h1 class="font-bold text-black dark:text-white text-xl">Datagen</h1>
             <span>Количество генерируемых цифр</span>
             <div class="flex w-full">
-                <input type="number" v-model="digitsSliderValue" class="rounded-lg bg-neutral-300 dark:bg-neutral-900  border-neutral-400 dark:border-neutral-700 focus:border-green-600 border-[2px] p-1 text-lg text-white placeholder:text-neutral-800 dark:placeholder:text-neutral-400 w-12">
+                <input type="number" v-model="digitsSliderValue" class="rounded-lg bg-neutral-300 dark:bg-neutral-900  border-neutral-400 dark:border-neutral-700 focus:border-green-600 border-[2px] p-1 text-lg dark:text-white placeholder:text-neutral-800 dark:placeholder:text-neutral-400 w-12">
                 <Slider :min=1 :max=250 class="mt-8 w-full self-center m-4" v-model="digitsSliderValue" />
             </div>
             <button @click="executeDigitDatagen()" name="load" class="p-2 w-full bg-green-600 rounded-lg hover:bg-green-500 transition-all text-white font-bold text-lg" > Сгенерировать</button>

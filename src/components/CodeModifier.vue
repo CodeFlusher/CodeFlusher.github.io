@@ -70,7 +70,7 @@ const execute = ()=>{
 <template>
 
 
-<div class="flex flex-col gap-3 bg-neutral-200 dark:bg-neutral-800">
+<div class="flex flex-col gap-3 bg-neutral-300 dark:bg-neutral-800">
     <h1 class="font-bold text-black dark:text-white text-xl">Code Modifiers</h1>
     <span>Тип выходных данных</span>
     <div>
