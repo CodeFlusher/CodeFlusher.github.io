@@ -20,7 +20,7 @@ const checkCode = (piece:String, a: number, b:number, c: number)=>{
 }
 
 const replaceBit = (piece: String, failedBit: number)=>{
-    console.log("replacing in: ",piece)
+    // console.log("replacing in: ",piece)
     var newString = ""
     for (let i = 0; i < piece.length ; i++) {
         if(i == failedBit - 1){
@@ -30,7 +30,7 @@ const replaceBit = (piece: String, failedBit: number)=>{
         newString = newString + piece[i]
     }
 
-    console.log("replace result: ", newString)
+    // console.log("replace result: ", newString)
     return newString
 }
 
@@ -41,7 +41,7 @@ const  executeCodeDatagen = ()=>{
         let value = v.trim()
         let parsedInt = Number.parseInt(value);
         if(parsedInt < 0 || parsedInt > 15){
-            console.log("Smaller than zero or larger than 15: ", value)
+            // console.log("Smaller than zero or larger than 15: ", value)
             return
         }
 
@@ -53,7 +53,7 @@ const  executeCodeDatagen = ()=>{
         if(addMistakes.value){
             
             let randomBit = Math.round(4*Math.random())
-            console.log(randomBit)
+            // console.log(randomBit)
             binary = replaceBit(binary, randomBit)
         }
 
