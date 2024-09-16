@@ -8,7 +8,6 @@ const model = defineModel()
 
 // i generated this via chat gpt yipee
 const clearField = ()=>{
-    console.log("Clearing Field" + model.value)
     model.value = ""
 }
 

@@ -8,8 +8,6 @@ const digitsSliderValue = defineModel<number>('sliderState')
 
 const addMistakes = defineModel<boolean>('addMistakes')
 
-// const digitsSliderValue = ref(5)
-
 const dec2bin = (dec:number)=> {
     let newNum = dec.toString(2)
   return '0'.repeat(4-newNum.length)+newNum;
@@ -20,7 +18,7 @@ const checkCode = (piece:String, a: number, b:number, c: number)=>{
 }
 
 const replaceBit = (piece: String, failedBit: number)=>{
-    // console.log("replacing in: ",piece)
+
     var newString = ""
     for (let i = 0; i < piece.length ; i++) {
         if(i == failedBit - 1){
@@ -30,7 +28,6 @@ const replaceBit = (piece: String, failedBit: number)=>{
         newString = newString + piece[i]
     }
 
-    // console.log("replace result: ", newString)
     return newString
 }
 
@@ -41,7 +38,6 @@ const  executeCodeDatagen = ()=>{
         let value = v.trim()
         let parsedInt = Number.parseInt(value);
         if(parsedInt < 0 || parsedInt > 15){
-            // console.log("Smaller than zero or larger than 15: ", value)
             return
         }
 
@@ -53,19 +49,13 @@ const  executeCodeDatagen = ()=>{
         if(addMistakes.value){
             
             let randomBit = Math.round(4*Math.random())
-            // console.log(randomBit)
             binary = replaceBit(binary, randomBit)
         }
 
-        // console.log(bit1, bit2, bit3)
         let firstPart = bit1.toString() + bit2.toString()
-        // console.log("first part: ", firstPart)
         let bin1 = binary[0].toString()
-        // console.log("bin1: ", bin1)
         let secondPart = bit3.toString()
-        // console.log("second part: ", secondPart)
         let otherBins = binary.substring(1, binary.length)
-        // console.log("other bins: ", otherBins)
 
         let newString = firstPart + bin1 + secondPart+ otherBins
         

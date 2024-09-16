@@ -22,8 +22,6 @@ const evaluatePiece = (piece:String) =>{
     let bit1 = checkCode(piece, 3, 5, 7) != Number.parseInt(piece[0])
     let bit2 = checkCode(piece, 3, 6, 7)!= Number.parseInt(piece[1])
     let bit4 = checkCode(piece, 5, 6, 7)!= Number.parseInt(piece[3])
-
-    console.log("bits: ", bit1, bit2, bit4)
     
 
     let failedBit = (bit1 ? 1 : 0) + (bit2 ? 2 : 0) + (bit4 ? 4 : 0)
