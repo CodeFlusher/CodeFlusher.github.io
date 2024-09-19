@@ -12,6 +12,7 @@ export default {
 
       backgroundImage: {
         'encodes': "url('/binary.jpg')",
+        'hex':"url('/hex.png')"
       },
 
       aspectRatio:{
