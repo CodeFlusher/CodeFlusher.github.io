@@ -38,7 +38,8 @@ import { RouterLink, RouterView } from 'vue-router'
     </nav>
   </header>
 
-  <!-- <div class=" bg-encodes bg-transparent"></div> -->
+  <div class=" bg-hexcode hidden"></div>
+  <div class=" bg-encodes hidden"></div>
 
   <RouterView class="w-full mt-24 flex m-auto" />
  

@@ -6,7 +6,7 @@ import InputField from '@/components/InputField.vue';
 
 const items = [
   {pageName:"Коды Хэмминга", pageDescription: "Утилита для расшифровки кодов Хэмминга, а так же генерации новых", pageBG:"encodes", pageDir:"encode"},
-  {pageName:"RLE Кодировка", pageDescription: "Утилита для работы с RLE кодами", pageBG:"hex", pageDir:"rle"},
+  {pageName:"RLE Кодировка", pageDescription: "Утилита для работы с RLE кодами", pageBG:"hexcode", pageDir:"rle"},
 ]
 
 const directToPage = (pageDirection:String)=>{
