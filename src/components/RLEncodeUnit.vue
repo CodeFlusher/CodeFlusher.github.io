@@ -172,6 +172,9 @@ const executeDecode = ()=>{
     }
 }
 
+const removeSpaces = ()=>{
+    outField.value = outField.value != undefined ? outField.value.replace(new RegExp(' ', 'g'), '') : ''
+}
 
 </script>
 
@@ -199,6 +202,7 @@ const executeDecode = ()=>{
 
     <button @click="executeEncode()" name="load" class="p-2 w-full bg-green-600 rounded-lg hover:bg-green-500 transition-all text-white font-bold text-lg" > Сжать</button>
     <button @click="executeDecode()" name="load" class="p-2 w-full bg-green-600 rounded-lg hover:bg-green-500 transition-all text-white font-bold text-lg" > Вернуть в исходное состояние</button>
+    <button @click="removeSpaces()" name="load" class="h-12 w-full bg-red-700 dark:bg-red-800 rounded-lg hover:bg-red-600 transition-all text-white font-bold text-lg" > Удалить пробелы(НЕБЕЗОПАСНО)</button>
    
     </div>
 </template>
