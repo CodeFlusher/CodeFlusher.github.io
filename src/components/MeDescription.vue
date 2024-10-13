@@ -16,7 +16,7 @@ const directToPage = (link:string)=>{
 
 <template>
     <div class="self-center flex flex-col gap-4">
-        <h2 class="text-4xl font-bold self-center"> Projects</h2>
+        <h2 class="text-4xl font-bold self-center text-black dark:text-white"> Projects</h2>
         <CardUnit v-for="item in things" @click="directToPage(item.link)" :page-description="item.description" :page-name="item.name" :page-img="item.icon" class="m-auto rounded-xl backdrop:rounded-xl hover:shadow-lg hover:shadow-gray-500 dark:hover:shadow-gray-800" />
     </div>
     
