@@ -1,10 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import EncodesView from '../views/EncodeView.vue'
 import RLEncodeView from '@/views/RLEncodeView.vue'
+import AboutView from '@/views/AboutView.vue'
+
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
@@ -14,17 +16,16 @@ const router = createRouter({
     {
       path: '/encode',
       name: 'encode',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: EncodesView
+    },
+    {
+     path: "/about",
+     name: "developer",
+     component: AboutView
     },
     {
       path: '/rle',
       name: 'rle',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: RLEncodeView
     }
   ]

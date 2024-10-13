@@ -3,6 +3,7 @@
 import router from '@/router';
 import CardUnit from '../components/CardUnit.vue'
 import InputField from '@/components/InputField.vue';
+import ImagedLabel from '@/components/ImagedLabel.vue';
 
 const items = [
   {pageName:"Коды Хэмминга", pageDescription: "Утилита для расшифровки кодов Хэмминга, а так же генерации новых", pageBG:"encodes", pageDir:"encode"},

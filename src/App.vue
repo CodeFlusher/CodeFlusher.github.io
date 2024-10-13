@@ -33,8 +33,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header class="fixed w-full top-0 p-6 h-24 flex backdrop-blur-xl max-h-24 bg-transparent z-10">
-    <nav class="m-auto">
+    <nav class="m-auto flex gap-10">
      <RouterLink to="/" class="text-3xl font-bold hover:font-extrabold dark:hover:text-white hover:text-[24pt] transition-all duration-200">Home</RouterLink>
+     <RouterLink to="/about" class="text-3xl font-bold hover:font-extrabold dark:hover:text-white hover:text-[24pt] transition-all duration-200">Developer</RouterLink>
     </nav>
   </header>
 

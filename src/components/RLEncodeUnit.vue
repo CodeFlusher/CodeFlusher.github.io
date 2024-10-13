@@ -43,6 +43,7 @@ const executeEncode = ()=>{
     }
     isFailed.value = false;
     if(inField.value == undefined){
+        isFailed.value = true
         //console.log('undefined')
         return;
     }
@@ -157,7 +158,7 @@ const executeDecode = ()=>{
 
         if(array == undefined){
             isFailed.value = true
-                return
+            return
         }
         for (let i = 0; i < array.length - 1; i+=2) {
             const element = array[i];
