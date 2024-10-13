@@ -3,24 +3,24 @@ import Tools from '@/components/Tools.vue';
 import { ref } from 'vue';
 
 const langs = ref([
-    {toolImg:"", toolName:"Java"},
-    {toolImg:"", toolName:"Kotlin"},
-    {toolImg:"", toolName:"C#"},
-    {toolImg:"", toolName:"Python"},
-    {toolImg:"", toolName:"JS"},
-    {toolImg:"", toolName:"TS"}
+    {toolImg:"/icons/lang/java.svg", toolName:"Java"},
+    {toolImg:"/icons/lang/kotlin.svg", toolName:"Kotlin"},
+    {toolImg:"/icons/lang/cs.svg", toolName:"C#"},
+    {toolImg:"/icons/lang/python.svg", toolName:"Python"},
+    {toolImg:"/icons/lang/js.svg", toolName:"JS"},
+    {toolImg:"/icons/lang/ts.svg", toolName:"TS"}
 ])
 
 const frameworks = ref([
-    {toolImg:"", toolName:"Tailwind"},
-    {toolImg:"", toolName:"VueJS"},
+    {toolImg:"/icons/frameworks/tailwind.svg", toolName:"Tailwind"},
+    {toolImg:"/icons/frameworks/vue.svg", toolName:"VueJS"},
 ])
 
 const tools = ref([
-    {toolImg:"", toolName:"IntelliJ idea"},
-    {toolImg:"", toolName:"Unity"},
-    {toolImg:"", toolName:"PyCharm"},
-    {toolImg:"", toolName:"Visual Studio Code"},
+    {toolImg:"/icons/programms/jetbrains.svg", toolName:"IntelliJ idea"},
+    {toolImg:"/icons/programms/unity.svg", toolName:"Unity"},
+    {toolImg:"/icons/programms/jetbrains.svg", toolName:"PyCharm"},
+    {toolImg:"/icons/programms/vscode.svg", toolName:"Visual Studio Code"},
 ])
 </script>
 

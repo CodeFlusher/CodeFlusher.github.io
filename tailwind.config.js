@@ -11,10 +11,10 @@ export default {
       },
 
       backgroundImage: {
-        'encodes': "url('/binary.jpg')",
-        'hexcode': "url('/hex.png')",
-        "gcalc":"url('/gcalc.webp')",
-        'ravm':"url('/ravm.webp')"
+        'encodes': "url('/backgrounds/binary.jpg')",
+        'hexcode': "url('/backgrounds/hex.png')",
+        "gcalc":"url('/backgrounds/gcalc.webp')",
+        'ravm':"url('/backgrounds/ravm.webp')"
       },
 
       aspectRatio:{

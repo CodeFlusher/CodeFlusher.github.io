@@ -10,7 +10,7 @@ const handleError = (event: ErrorEvent)=>{
     if(!event.target){
         return
     }
-    (event.target as ImgHTMLAttributes).src='/NotFound.webp'
+    (event.target as ImgHTMLAttributes).src="/images/NotFound.webp"
 }
 
 </script>

@@ -9,9 +9,9 @@ import ImagedLabel from '@/components/ImagedLabel.vue';
             <h1 class="text-4xl text-black dark:text-white w-full text-center">👋I'm <b>CodeFlusher</b></h1>
             <div class=" flex flex-col gap-1">
                 <h2 class="text-2xl"> IRL: Егор Свердлов (Egor Sverdlov)</h2>
-                <ImagedLabel class="h-fit" img="/discord.svg" adress="https://discord.gg/X8kUwRkRbW" label-text="Discord: codeflusher" copy-text="codefluser"></ImagedLabel>
-                <ImagedLabel class="h-fit" img="/youtube.svg" adress="https://www.youtube.com/@codeflusher" label-text="Youtube: CodeFlusher" copy-text="https://www.youtube.com/@codeflusher"></ImagedLabel>
-                <ImagedLabel class="h-fit" img="/telegram.svg" adress="https://t.me/codeflusher" label-text="Telegram: CodeFlusher" copy-text="@CodeFlusher"></ImagedLabel>
+                <ImagedLabel class="h-fit" img="/icons/social/discord.svg" adress="https://discord.gg/X8kUwRkRbW" label-text="Discord: codeflusher" copy-text="codefluser"></ImagedLabel>
+                <ImagedLabel class="h-fit" img="/icons/social/youtube.svg" adress="https://www.youtube.com/@codeflusher" label-text="Youtube: CodeFlusher" copy-text="https://www.youtube.com/@codeflusher"></ImagedLabel>
+                <ImagedLabel class="h-fit" img="/icons/social/telegram.svg" adress="https://t.me/codeflusher" label-text="Telegram: CodeFlusher" copy-text="@CodeFlusher"></ImagedLabel>
                 <p class="text-2xl"> Meow.</p>
             </div>
         </div>
