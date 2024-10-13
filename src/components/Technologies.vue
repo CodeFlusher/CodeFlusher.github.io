@@ -27,6 +27,6 @@ const tools = ref([
 <template>
     <h2 class="text-4xl font-bold self-center text-black dark:text-white"> Tools I use</h2>
         <Tools :tools="langs" title="Programming Languages"></Tools>
-        <Tools :tools="frameworks" title="Known Frameworks"></Tools>
+        <Tools :tools="frameworks" title="Frameworks"></Tools>
         <Tools :tools="tools" title="Programms & Tools"></Tools>
 </template>

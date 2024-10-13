@@ -34,9 +34,9 @@ const wheel = (event: WheelEvent)=>{
 
 <template>
     <div class="w-full flex flex-col ">
-        <h2 class="self-center text-3xl"><b>{{ props.title }}</b></h2>        
-        <div class="flex ml-auto mr-auto mt-4 overflow-x-scroll max-w-full whitespace-nowrap no-scrollbar" @wheel="wheel">
-            <ToolCardView class="h-56 aspect-[56/64]" ref="scrollBarReference" v-for="item in tools" :tool-img="item.toolImg" :tool-name="item.toolName"></ToolCardView>
+        <h2 class="md:self-center text-3xl"><b>{{ props.title }}</b></h2>        
+        <div class="flex md:ml-auto md:mr-auto mt-4 overflow-x-scroll max-w-full whitespace-nowrap no-scrollbar h-fit gap-4 p-1" @wheel="wheel">
+            <ToolCardView class="min-w-24 max-w-24" ref="scrollBarReference" v-for="item in tools" :tool-img="item.toolImg" :tool-name="item.toolName"></ToolCardView>
         </div>
     </div>
 </template>
