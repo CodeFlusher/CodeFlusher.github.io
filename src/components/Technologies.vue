@@ -14,6 +14,7 @@ const langs = ref([
 const frameworks = ref([
     {toolImg:"/icons/frameworks/tailwind.svg", toolName:"Tailwind"},
     {toolImg:"/icons/frameworks/vue.svg", toolName:"VueJS"},
+    {toolImg:"/icons/frameworks/nuxt.svg", toolName:"Nuxt.js"}
 ])
 
 const tools = ref([
